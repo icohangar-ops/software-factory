@@ -103,6 +103,8 @@ Run it locally against any repo: `./scripts/run-tito-local.sh .`
 
 ### Deployed on Render
 
+![Render Blueprint — software-factory, Deployed](assets/render-blueprint.png)
+
 ![Render service — software-factory, live](assets/render-service.png)
 
 ### Live PoC output
