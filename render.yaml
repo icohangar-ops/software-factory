@@ -12,7 +12,7 @@ services:
     name: software-factory
     runtime: node
     region: oregon
-    plan: free
+    plan: starter
   # Do not pin branch — PR previews deploy the PR branch automatically
     rootDir: app
     buildCommand: npm ci && npm run build
