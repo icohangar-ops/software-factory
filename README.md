@@ -30,7 +30,7 @@ Targets **[superplanehq/superplane](https://github.com/superplanehq/superplane)*
 
 A software factory that lets LLM agents **write and ship code autonomously** is itself an agentic-AI system — with all the novel attack surface that implies. Prompt injection becomes a code-execution path, tool access becomes lateral movement, and trust boundaries shift at runtime based on model behavior. Traditional SAST was never designed for this.
 
-**MAESTRO** (*Multi-Agent Environment, Security, Threat, Risk, and Outcome*) is the Cloud Security Alliance's **seven-layer reference framework for threat-modeling agentic AI**, created by Ken Huang. Instead of treating vulnerabilities in isolation, MAESTRO traces **cross-layer attack chains** — e.g. a Layer 1 prompt injection cascading through Layer 3 agent logic into a Layer 4 tool call — and treats **trust-boundary validation between layers** as the primary control.
+**MAESTRO** — *Multi-Agent Environment, Security, Threat, Risk, and Outcome* — is a **seven-layer reference framework for threat-modeling agentic AI**, introduced by Ken Huang via the Cloud Security Alliance. Instead of treating vulnerabilities in isolation, it decomposes an agentic system into seven layers and traces **cross-layer attack chains** — e.g. a Layer 1 prompt injection cascading through Layer 3 agent logic into a Layer 4 tool call — treating **trust-boundary validation between layers** as the primary control.
 
 ### The seven MAESTRO layers
 
@@ -90,17 +90,24 @@ Run it locally against any repo: `./scripts/run-tito-local.sh .`
 
 ### The factory canvas (SuperPlane)
 
-![SuperPlane Software Factory canvas](docs/images/superplane-canvas.png)
+![Full SuperPlane Software Factory pipeline — all 28 nodes](assets/superplane-canvas-full.png)
 
-*28 nodes across five stages — intake → spec → sandbox implementation → build gate → TITO/MAESTRO security gate → PR + Render preview. Each stage validates the previous one before proceeding.*
+*The full pipeline — **28 nodes** across five stages: intake → spec → sandbox implementation → build gate → TITO/MAESTRO security gate → PR + Render preview. Each stage validates the previous one before proceeding (canvas reports **0 errors / 0 warnings**).*
+
+<details>
+<summary>Intake detail — triggers &amp; input normalization (click to expand)</summary>
+
+![SuperPlane canvas — intake detail](assets/superplane-canvas.png)
+
+</details>
 
 ### Deployed on Render
 
-![Render service — software-factory, live](docs/images/render-service.png)
+![Render service — software-factory, live](assets/render-service.png)
 
 ### Live PoC output
 
-![Live app deployed from the factory](docs/images/live-app.png)
+![Live app deployed from the factory](assets/live-app.png)
 
 ---
 
@@ -172,8 +179,8 @@ superplane/
 .github/workflows/
   tito-maestro.yml         # CI MAESTRO gate + threat-diff on PRs
   render-preview.yml       # Posts the Render PR preview URL
+assets/                    # README screenshots (full canvas, Render, live app)
 docs/
-  images/                  # README screenshots (canvas, Render, live app)
   RENDER_WEBHOOKS.md       # Render → SuperPlane webhook wiring
 render.yaml                # Render Blueprint
 HACKATHON.md               # Theme checklist + demo script
