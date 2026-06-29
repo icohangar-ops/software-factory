@@ -1,10 +1,12 @@
 # SuperPlane Software Factory
 
+> **Cubiczan stack entry point** — [Profile](https://github.com/Cubiczan) · [Full stack map](docs/CUBICZAN_STACK.md)
+
 **Hackathon theme:** [Build Your Own Software Factory](https://docs.google.com/document/d/151kAyQbpLdWKggWLMBPtjABEOaIN4h4gsBHOwthCN_s/edit) — turn a vague idea or GitHub issue into a working PoC overnight, with minimal human involvement.
 
 An end-to-end **automated feature-production pipeline** orchestrated on [SuperPlane](https://docs.superplane.com/): a rough idea or GitHub issue goes in; an LLM specs it, a coding agent implements it in a sandbox, every stage validates the previous one, an **agentic-AI threat model (MAESTRO via TITO)** gates the change, and a working PoC ships to a [Render](https://dashboard.render.com/) preview — with the live URL posted back on the PR.
 
-> **Live demo:** [software-factory-246a.onrender.com](https://software-factory-246a.onrender.com) · **Repo:** [icohangar-ops/software-factory](https://github.com/icohangar-ops/software-factory) · See **[HACKATHON.md](./HACKATHON.md)** for the demo script and judging alignment.
+> **Live demo:** [software-factory-246a.onrender.com](https://software-factory-246a.onrender.com) · **Repo:** [Cubiczan/software-factory](https://github.com/Cubiczan/software-factory) · See **[HACKATHON.md](./HACKATHON.md)** for the demo script and judging alignment.
 
 ---
 
@@ -187,6 +189,16 @@ docs/
 render.yaml                # Render Blueprint
 HACKATHON.md               # Theme checklist + demo script
 ```
+
+---
+
+## Cubiczan finance + governance stack
+
+Full map: **[docs/CUBICZAN_STACK.md](docs/CUBICZAN_STACK.md)** · [Profile](https://github.com/Cubiczan)
+
+**Finance:** [Strata](https://github.com/Cubiczan/Strata) · [Metabocommand](https://github.com/Cubiczan/Metabocommand) · [meshcfo](https://github.com/Cubiczan/meshcfo) · [WCO](https://github.com/Cubiczan/working-capital-optimizer) · [cash-flow-optimizer](https://github.com/Cubiczan/cash-flow-optimizer) · [finance-cockpit](https://github.com/Cubiczan/finance-cockpit)
+
+**Governance:** [consensus-hardening-protocol](https://github.com/Cubiczan/consensus-hardening-protocol) · [agent-conductor](https://github.com/Cubiczan/agent-conductor) · [compliance-as-code-agent](https://github.com/Cubiczan/compliance-as-code-agent) · [cleanmandate](https://github.com/Cubiczan/cleanmandate)
 
 ---
 
